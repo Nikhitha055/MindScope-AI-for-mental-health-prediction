@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.symptoms-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 10px;
+}
+
+.symptom-item {
+    background: #eef3f7;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.symptom-item:hover {
+    background: #d9e9f7;
+}
+
+button {
+    background: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #3b7bc4;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+    line-height: 1.4;
+}

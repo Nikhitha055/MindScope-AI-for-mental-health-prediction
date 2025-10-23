@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Primary Diagnosis:</strong> {{ primary }}</p>
+    <h3>Top 3 Possible Disorders:</h3>
+    <ul>
+        {% for pred in top_3 %}
+            <li>{{ pred.disorder }} - {{ pred.probability }}%</li>
+        {% endfor %}
+    </ul>
+    <h3>Your Symptoms:</h3>
+    <ul>
+        {% for sym in symptoms %}
+            <li>{{ sym.replace('_', ' ').title() }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+    <footer>
+        <div class="footer-content">
+            <p><strong> Important Medical Disclaimer:</strong><br>
+            This AI-powered assessment is for educational and screening purposes only. It cannot replace professional medical diagnosis or treatment. If you're experiencing mental health symptoms, please consult with a qualified mental health professional, psychiatrist, or your primary care physician.</p>
+
+            <p><strong> Emergency Resources:</strong><br>
+            • National Suicide Prevention Lifeline: <strong>988</strong><br>
+            • Crisis Text Line: Text <strong>HOME</strong> to 741741<br>
+            • Emergency Services: <strong>911</strong></p>
+        </div>
+    </footer>
+</body>
+</html>
